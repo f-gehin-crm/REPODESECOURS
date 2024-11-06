@@ -17,25 +17,29 @@ second tour en étant arrivé en tête à l’issue du premier tour) ou défavor
 
    
     public static void main(String[] args) throws Exception {
-        System.out.println("\n" + "Hello, World!"  + "\n");
+        System.out.println("\n" + " Hello, World !!!!"  + "\n");
 
         Scanner sc = new Scanner(System.in);
 
         /* Declaration des variables */
 
-       int [] R = new int[3];
-       String [] N = new String[3];
+       int [] R = new int[4];
+       String [] N = new String[4];
+       int j = 0;
         int i = 0;
         int T = 0;
+        String TEST ="";
         boolean B = false;
 
         /* Saisie des données */
 
         for (i=0 ; i<4 ; i++) { 
-            System.out.println("\n" + "Entrez le nom du candidat " +i + " : "  + "\n"); 
+            j=j+1;
+            System.out.println("\n" + "Entrez le nom du candidat " +j + " : "  + "\n"); 
               N [i] = sc.nextLine();
-            System.out.println("\n" + "Entrez le score du candidat en pourcentage " +i + " : "  + "\n"); 
+            System.out.println("\n" + "Entrez le score (en pourcentage) de monsieur " + N[i] + " : "  + "\n"); 
               R[i] = sc.nextInt();
+              TEST = sc.nextLine();
 
                              }
 
@@ -62,6 +66,16 @@ second tour en étant arrivé en tête à l’issue du premier tour) ou défavor
 
 
              /* Test pour le ballotage */
+
+        if ( R[0]>= 12.5 & R[0]>=R[1] & R[0]>=R[2] & R[0]>=R[3]) { System.out.println("\n" + " Monsieur " + N[0] + " est en ballotage favorable pour le 2eme tour" + "\n");
+                            sc.close();
+                             System.exit(0);
+                             }
+
+                             else {System.out.println("\n" + " Monsieur " + N[0] + " est en ballotage défavorable"+ "\n");
+                             sc.close();
+                             System.exit(0);
+                             }
 
 
 
