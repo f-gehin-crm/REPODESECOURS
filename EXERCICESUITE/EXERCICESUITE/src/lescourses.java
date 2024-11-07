@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class tarifassurance {
+public class lescourses {
     
         /*  Une compagnie d’assurance automobile propose à ses clients quatre familles de tarifs identifiables par une couleur, 
         du moins au plus onéreux :
@@ -35,46 +35,26 @@ public class tarifassurance {
 
         Scanner sc = new Scanner(System.in); 
 
-        int AGE = 0;
-        int DUREE =0;
-        int ACCIDENT = 0;
-        int TARIFACTUEL = 0;
-        int COMPTEUR = 0;
-
-       /* String [] CODETARIF = new String[5];*/
-        String [] CODETARIF = {"Rouge","Orange","Vert","Bleu"};
 
 
-       /*  String [] CODECOULEUR = new String[5];
-        int [] DONNEES;
-        String [] ATTRIBUTSDONNEES; */
 
-        System.out.println("\n" + " Quel est votre age ? : "  + "\n");
-        AGE = sc.nextInt();
-        if ( AGE > 25) {COMPTEUR = COMPTEUR +1;}
 
-        System.out.println("\n" + " Vous avez le permis depuis combien d'années ? :"  + "\n");
-        DUREE = sc.nextInt();
-        if ( DUREE > 2) { COMPTEUR = COMPTEUR + 1;}
 
-        System.out.println("\n" + " Combien avez vous eu d'accident(s) ? : "  + "\n");
-        ACCIDENT = sc.nextInt();
-        COMPTEUR = COMPTEUR - ACCIDENT;
 
-        System.out.println("\n" + " Etiez vous assuré l'année dernière ? ( 1=oui ; 0 = non ) ? : "  + "\n");
-        TARIFACTUEL = sc.nextInt();
 
-        COMPTEUR = COMPTEUR + TARIFACTUEL;
 
-            if ( COMPTEUR < 0) {
-                System.out.println("\n" + " NOUS NE POUVONS PAS VOUS ASSURER ,  DESOLE ");
-                sc.close();
-                System.exit(0);
-            }
 
-        System.out.println("\n" + " Vous êtes au tarif : "+ CODETARIF[COMPTEUR]  + "\n");
+
+
+
+
+
+
+
+
 
         sc.close();
         System.exit(0);
+
     }
 }

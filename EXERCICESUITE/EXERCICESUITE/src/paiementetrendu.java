@@ -40,22 +40,54 @@ Répartition de la monnaie à restituer au client :
 
         double PRIX = -1;
         double TOTAL = 0;
+        double NOMBREDEBILLET = 0;
+        double INFO = 0;
+        double RENDUMONNAIE = 0;
+        double RENDUMONNAIE2 = 0;
+       /*  double A [] = new double [8]; */
+        double [] A = {2,1,0.5,0.2,0.1,0.05,0.02,0.01};
+        double NBTOKEN =0 ;
+        int i = 0;
+
 
 
         /*Saisie des prix */
 
         while ( PRIX !=0) {
          System.out.println("\n" + "Veuillez entrer le prix : ");
-        PRIX =sc.nextInt();
+        PRIX =sc.nextDouble();
         TOTAL = TOTAL + PRIX;
         }
 
+        System.out.println("\n" + " Le client doit payer : "+ TOTAL + " Euros.");
+
+        NOMBREDEBILLET = Math.ceil ( TOTAL/5);
+        INFO = NOMBREDEBILLET*5;
+
+        System.out.println("\n" + " Le client doit donner " + Math.floor(NOMBREDEBILLET) + " de 5 euros , soit "+ INFO + " Euros.");
+        RENDUMONNAIE = INFO - TOTAL;
+        RENDUMONNAIE2 = Math.ceil( RENDUMONNAIE*100000)/100000;
+
+        System.out.println("\n" + " Rendu monnaie : " + RENDUMONNAIE2 + " Euros" + "\n");
+
+
+        /* Calcul du rendu */
+        System.out.println("\n" + " La répartition de la monnaie à restituer au client est : ");
+        double RESTE = RENDUMONNAIE2;
+      
+        for (i=0; i<A.length; i ++) {
+
+        NBTOKEN = Math.floor( RESTE / A[i]);
+        System.out.println("\n" + NBTOKEN + " pièces de " + A[i] + " euros" );
+        RESTE = RESTE - NBTOKEN*A[i];
+        RESTE = Math.floor( RESTE*100000)/100000;
 
 
 
 
 
 
+                                }       
 
 
 
