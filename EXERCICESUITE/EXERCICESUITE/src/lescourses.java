@@ -2,32 +2,28 @@ import java.util.Scanner;
 
 public class lescourses {
     
-        /*  Une compagnie d’assurance automobile propose à ses clients quatre familles de tarifs identifiables par une couleur, 
-        du moins au plus onéreux :
+        /*  Écrire un algorithme qui permet de connaître ses chances de gagner au tiercé, quarté, quinté et autres
+         impôts volontaires.
 
-        Tarifs bleu, vert, orange et rouge.
-        Le tarif dépend de la situation du conducteur :
-        
-        Un conducteur de moins de 25 ans et titulaire du permis depuis moins de deux ans, se voit attribuer le tarif rouge,
-         si toutefois il n’a jamais été responsable d’accident. Sinon, la compagnie refuse de l’assurer.
-        
-        Un conducteur de moins de 25 ans et titulaire du permis depuis plus de deux ans, ou de plus de 25 ans mais titulaire du permis
-         depuis moins de deux ans a le droit au tarif orange s’il n’a jamais provoqué d’accident, ou le tarif rouge s’il a été repsonsable 
-         d’un accident, sinon il est refusé.
-        
-        Un conducteur de plus de 25 ans titulaire du permis depuis plus de deux ans bénéficie du tarif vert 
-        s’il n’est à l’origine d’aucun accident et du tarif orange pour un accident, du tarif rouge pour deux accidents, et refusé au-delà
-        
-        De plus, pour encourager la fidélité des clients acceptés, la compagnie propose un contrat de la couleur immédiatement la plus avantageuse
-         s’il est assuré depuis plus de cinq ans. Ainsi, s’il satisfait à cette exigence, un client normalement “vert” devient “bleu”, 
-         un client normalement “orange” devient “vert”, et le “rouge” devient orange.
-        
-        Ecrire l’algorithme permettant de saisir les données nécessaires (sans contrôle de saisie) et de traiter ce problème.
-         Avant de se lancer à corps perdu dans cet exercice, on pourra réfléchir un peu et s’apercevoir qu’il est plus simple
-          qu’il n’en a l’air (cela s’appelle faire une analyse !)…
-        
-        Exercices ABC */
-  
+On demande à l’utilisateur le nombre de chevaux partants, et le nombre de chevaux joués. Les deux messages affichés 
+devront être :
+
+Dans l’ordre : une chance sur X de gagner 
+Dans le désordre : une chance sur Y de gagner 
+X et Y nous sont donnés par la formule suivante: si n est le nombre de chevaux partants et p le nombre de chevaux 
+joués (le signe ! signifie « factorielle ») :
+
+X = n! / (n - p)! 
+Y = n! / (p! * (n – p)!)
+Cet algorithme peut être écrit d’une manière simple, mais relativement peu performante. Ses performances peuvent 
+être singulièrement augmentées par une petite astuce. Vous commencerez par écrire la manière la plus simple,
+ puis vous identifierez le problème, et écrirez une deuxième version permettant de d’améliorer les performances de l’algorithme.
+
+Validez votre travail avec votre formateur avant de passer à la suite.
+
+Exercices ABC */
+
+
 
    
     public static void main(String[] args) throws Exception {
@@ -35,11 +31,52 @@ public class lescourses {
 
         Scanner sc = new Scanner(System.in); 
 
+        int nbp = 0;
+        int nbj = 0;
+        int A = 0;
+        int I = 0;
+        double X = 0;
+        double Y = 0;
+        double [][] FACT =new double [3][2];
+
+        double A0 = nbp;
+        double A1 = nbj;
+        double A2 = nbp-nbj;
+
+        System.out.println("\n" + "Combien de chevaux au départ  ?  : "  + "\n");
+        nbp = sc.nextInt();
+        System.out.println("\n" + " Combien de chevaux jouer vous  ?  :"  + "\n");
+        nbj = sc.nextInt();
 
 
+        FACT[0][0] = nbp;
+        FACT[1][0] = nbj;
+        FACT[2][0] = nbp-nbj;
 
+        FACT[0][1] = 0;
+        FACT[1][1] = 0;
+        FACT[2][1] = 0;
+        /* procédure factorielle */
+        while ( A != 3) {
+        
+     
+        int N = 1;
+           
+        for ( I = 1; I<=FACT[A][0]; I++) { N=N*I;}
+        FACT[A][1] =N;
+        A=A+1;
+        }
+            I=1;
+        for (I=0; I<=2; I++) {
+        System.out.println("\n" + FACT[I][1]  + "\n");
+         }
 
+         X = FACT[0][1] / FACT[2][1] ;
+         Y = FACT[0][1] / ( FACT[1][1] * FACT[2][1] ) ;
 
+         System.out.println("\n" + "Une chance sur " + X + " de gagner dans l'ordre"  + "\n");
+
+         System.out.println("\n" + "Une chance sur " + Y + " de gagner dans le désordre"  + "\n");
 
 
 
@@ -55,6 +92,6 @@ public class lescourses {
 
         sc.close();
         System.exit(0);
-
     }
+    
 }
