@@ -5,10 +5,13 @@ import java.util.Scanner;
 
 public class alimenteruntableu {
 
-
+   
 
     public static void main(String[] args) throws Exception {
-    
+   
+        /* déclaration des variables */
+
+
         int N = 0;
         int pos = 0;
         int neg = 0;
@@ -22,6 +25,9 @@ public class alimenteruntableu {
         N = sc.nextInt();
 
         int TAB []= new int[N];
+
+
+        /*  Saisie des valeurs */
 
         for( i=0; i<=(N-1); i++) 
             {   System.out.println( " Entrez la " + (i+1)+ "ème valeur  :  ");
@@ -37,6 +43,8 @@ public class alimenteruntableu {
 
 
             }
+
+        /* Affichage des résultats */
 
                 System.out.println(" il y a "+ pos + " valeurs positives.");
                 System.out.println( " il y a " + neg + " valeurs négatives");

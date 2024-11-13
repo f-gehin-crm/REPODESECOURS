@@ -61,11 +61,13 @@ Exercices ABC */
         
      
         int N = 1;
-           
-        for ( I = 1; I<=FACT[A][0]; I++) { N=N*I;}
-        FACT[A][1] =N;
-        A=A+1;
-        }
+        for ( A=0; A<3; A++)  
+                 {
+            for ( I = 1; I<=FACT[A][0]; I++)
+                         { N=N*I;}
+                        FACT[A][1] =N;
+                        N=1;
+                 }
             I=1;
         for (I=0; I<=2; I++) {
         System.out.println("\n" + FACT[I][1]  + "\n");
@@ -94,4 +96,5 @@ Exercices ABC */
         System.exit(0);
     }
     
+}
 }
