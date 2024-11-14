@@ -48,8 +48,8 @@ public class recherchedansuntableau {
 
             /* rendu des resultats */
 
-            System.out.println( Valeursup);
-            System.out.println( (Position + 1));
+            System.out.println(" La plus haute valeur est " + Valeursup);
+            System.out.println( "Elle est en position  :  " +(Position + 1));
 
 
         sc.close();
