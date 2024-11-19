@@ -15,7 +15,7 @@ public class sommedetableaux {
 
                 int N=10;
                 int i = 0;
-
+                sc.close();
                 for( i=0; i<=(N-1); i++) 
 
                 {   System.out.println( " Entrez la " + (i+1) + "ème valeur du tablaeu A  :  ");
@@ -41,7 +41,7 @@ public class sommedetableaux {
 
 
 
-                sc.close();
+                
                 System.exit(0);
             }
 

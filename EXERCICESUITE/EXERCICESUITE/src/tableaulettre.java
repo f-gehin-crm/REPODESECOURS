@@ -29,7 +29,8 @@ for(i=0; i<=5; i ++) {
  }
  
 
-
+ sc.close();
+ System.exit(0);
 
     }
 
