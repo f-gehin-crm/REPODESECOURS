@@ -25,7 +25,7 @@ public class modifieruntableau {
                     /* Saisie des données */
 
 
-                        System.out.println ("Combien d'entiers voulez saisir  :  ");
+                        System.out.println (" \n" + "Combien d'entiers voulez saisir  :  ");
                         N= sc.nextInt();
                         sc.nextLine();
                         System.out.println ( " Quel est votre prénom ?  :  ");
@@ -40,7 +40,7 @@ public class modifieruntableau {
 
                         for(i=0; i<N; i++)  {
 
-                                System.out.println( " Entrez la " + (N+1) + "valeur  :  ");
+                                System.out.println( " Entrez la " + (i+1) + "eme valeur  :  ");
                                 Tableau[i] = sc.nextInt();
                                 TableauRésult[i] = Tableau[i] + 1;
 

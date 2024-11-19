@@ -1,6 +1,6 @@
 public class fonction1bis {
 
-        public static void main(String args) {
+        public static void main(String[] args) {
             fonction1bis.helloWorld();
         }
     
