@@ -1,7 +1,7 @@
 public class exercicemikaelmardi {
     
 
-    public class void Main ( String [] args) throws Exception {
+    public static void Main ( String [] args) throws Exception {
         
 
 
