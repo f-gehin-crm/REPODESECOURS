@@ -24,7 +24,7 @@ Le programme affiche ensuite “Bienvenue “ suivi du prénom saisi.
 
         // Traitement
 
-        System.out.println( " Entrez votre prénom svp   :  ")
+        System.out.println( " Entrez votre prénom svp   :  ");
 
         sc.close();
     
