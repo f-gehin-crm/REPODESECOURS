@@ -15,6 +15,6 @@ public class tableaun {
 
 
 
-        sc.close(o);
+        sc.close();
     }
 }

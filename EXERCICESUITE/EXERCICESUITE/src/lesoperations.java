@@ -14,7 +14,7 @@ public class lesoperations {
 
         // Traitement
 
-
+        resultat = 0f;
         System.out.println(" \n  HELLO  WORLD  !!!");
         System.out.println(" Entrez un nombre :  ");
         nb1=sc.nextInt();
