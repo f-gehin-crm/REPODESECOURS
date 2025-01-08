@@ -47,7 +47,7 @@
                 + typeCarburant + ", moteur=" + moteur + ", contact=" + contact + ", accelerateur=" + accelerateur
                 + ", frein=" + frein + "]";
     }
-        // Vérifie que la voiture et démarrer
+        // Vérifie que la voiture est démarrer
     public void demarrer() {
         if (contact == false) {
             this.contact = true;
@@ -56,7 +56,7 @@
             System.out.println("La voiture est déjà démarrée");
         }
     }
-        // Vérifie que la voiture et stopper
+        // Vérifie que la voiture est stopper
     public void stopper() {
         if (contact == true) {
             this.contact = false;
