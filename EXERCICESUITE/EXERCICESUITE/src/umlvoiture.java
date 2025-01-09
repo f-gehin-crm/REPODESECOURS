@@ -11,13 +11,15 @@
         private boolean contact;
         private boolean accelerateur;
         private boolean frein;
+        private int vitesse;
  
         //Constructeur par defaut
         public umlvoiture() {
     }
         //Constructeur classique
         //This. sert à indiquer un objet particulier
-    public umlvoiture(String marque, int annee, int nbRoues, String typeCarburant, boolean moteur, boolean contact, boolean accelerateur, boolean frein) {
+    public umlvoiture(String marque, int annee, int nbRoues, String typeCarburant, boolean moteur, boolean contact, boolean accelerateur,
+     boolean frein, int vitesse) {
         this.marque = marque;
         this.annee = annee;
         this.nbRoues = nbRoues;
@@ -26,6 +28,7 @@
         this.contact = contact;
         this.accelerateur = accelerateur;
         this.frein = frein;
+        this.vitesse = vitesse;
     }
     public Object clone(){
         Object o = null;
@@ -45,9 +48,9 @@
     public String toString() {
         return "Voiture [marque=" + marque + ", annee=" + annee + ", nbRoues=" + nbRoues + ", typeCarburant="
                 + typeCarburant + ", moteur=" + moteur + ", contact=" + contact + ", accelerateur=" + accelerateur
-                + ", frein=" + frein + "]";
+                + ", frein=" + frein + ", vitesse = " + vitesse +"]";
     }
-        // Vérifie que la voiture est démarrer
+        // Vérifie que la voiture est démarree
     public void demarrer() {
         if (contact == false) {
             this.contact = true;
@@ -56,7 +59,7 @@
             System.out.println("La voiture est déjà démarrée");
         }
     }
-        // Vérifie que la voiture est stopper
+        // Vérifie que la voiture est stoppee
     public void stopper() {
         if (contact == true) {
             this.contact = false;
@@ -85,5 +88,20 @@
             System.out.println("La voiture n'est pas démarrée");
         }
     }
+
+        // Affiche la vitesse max
+    public void vit() {
+        System.out.println( " La vitesse maximum est :" + vitesse);
+    }
+
+        // creation des getters
+
+        public int getVitesse() {
+            return this.vitesse;
+        }
+
+        public String getMarque() {
+            return this.marque;
+        }
 }
 
