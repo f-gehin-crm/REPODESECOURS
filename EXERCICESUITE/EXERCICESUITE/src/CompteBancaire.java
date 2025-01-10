@@ -1,3 +1,9 @@
+import java.util.Scanner;
+
+
+import java.util.Scanner;
+
+
 public class CompteBancaire {
   
     
@@ -20,7 +26,7 @@ public class CompteBancaire {
       this.numero = numero;
       this.nom = nom;
       this.solde = solde;
-      this.decouvertAutorise = typeCarburant;
+      this.decouvertAutorise = decouvertAutorise;
     
   }
 
@@ -44,19 +50,26 @@ public class CompteBancaire {
 
       // Méthode toString pour afficher tous les attributs de l'objet
   public String toString() {
-      return "Voiture [marque=" + marque + ", annee=" + annee + ", nbRoues=" + nbRoues + ", typeCarburant="
-              + typeCarburant + ", moteur=" + moteur + ", contact=" + contact + ", accelerateur=" + accelerateur
-              + ", frein=" + frein + ", vitesse = " + vitesse +"]";
+      return "Compte courant " + "\n" + "nom :" + nom + "\n" + "numero : " + numero + "\n"+ "solde = " + solde + "\n" + "découvert autorisé = " 
+                + decouvertAutorise + "\n";
+
+              
+      // Crediter le compte :
+  public void crediter() {
+       Scanner scanner = new Scanner(System.in);
+       System.out.println("De combien voulez vous créditer ?  :  ");
   }
-      // Vérifie que la voiture est démarree
-  public void demarrer() {
-      if (contact == false) {
-          this.contact = true;
-          System.out.println("La voiture est mainteant démarrée");
-      } else {
-          System.out.println("La voiture est déjà démarrée");
-      }
-  }
+
+
+
+
+
+
+
+
+
+
+
       // Vérifie que la voiture est stoppee
   public void stopper() {
       if (contact == true) {
