@@ -13,6 +13,7 @@ public class CompteBancaire {
       private String nom;
       private float solde;
       private float decouvertAutorise;
+      private float montant;
      
 
 
@@ -55,9 +56,12 @@ public class CompteBancaire {
 
               
       // Crediter le compte :
-  public void crediter() {
-       Scanner scanner = new Scanner(System.in);
+  public void crediter(float montant) {
+
+       Scanner sc = new Scanner(System.in);
        System.out.println("De combien voulez vous créditer ?  :  ");
+       montant = sc.nextFloat;
+       solde = solde + montant;
   }
 
 
