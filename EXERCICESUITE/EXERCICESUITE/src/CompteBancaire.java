@@ -53,17 +53,39 @@ public class CompteBancaire {
   public String toString() {
       return "Compte courant " + "\n" + "nom :" + nom + "\n" + "numero : " + numero + "\n"+ "solde = " + solde + "\n" + "découvert autorisé = " 
                 + decouvertAutorise + "\n";
-
+  }
               
       // Crediter le compte :
   public void crediter(float montant) {
 
-       Scanner sc = new Scanner(System.in);
-       System.out.println("De combien voulez vous créditer ?  :  ");
-       montant = sc.nextFloat;
+
+    /*          Scanner sc = new Scanner(System.in);   à mettre dans le main, puis récupérer la valeur de votre scanner insérer dans la variable montant */
+
+
+      /* System.out.println("De combien voulez vous créditer ?  :  ");
+       montant = sc.nextFloat; */
        solde = solde + montant;
+       System.out.println( " le solde est maintenant de  :  " +solde);
   }
 
+public boolean debiter ( float montant) { 
+     if ( solde - montant >= decouvertAutorise) {  solde = solde- montant ; return true;}
+        else { System.out.println("Solde insuffisant"); return false;}
+}
+
+public boolean transferer ( CompteBancaire c1 , CompteBancaire c2 , float montant ) {
+    boolean flag;
+    flag = c1.debiter(montant);
+     if ( flag = true) {c2.crediter(montant); return true;}
+        else { return false;}
+}
+
+public boolean comparer ( CompteBancaire c1 , CompteBancaire c2) {
+     if ( c2.solde > c1.solde) { return true;}
+        else { return false;}
+}
+
+}
 
 
 
