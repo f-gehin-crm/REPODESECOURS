@@ -1,7 +1,6 @@
-import java.util.Scanner;
 
 
-import java.util.Scanner;
+
 
 
 public class CompteBancaire {
@@ -76,8 +75,8 @@ public boolean debiter ( float montant) {
 public boolean transferer ( CompteBancaire c1 , CompteBancaire c2 , float montant ) {
     boolean flag;
     flag = c1.debiter(montant);
-     if ( flag = true) {c2.crediter(montant); return true;}
-        else { return false;}
+     if ( flag = true) {c2.crediter(montant);}
+        return flag;
 }
 
 public boolean comparer ( CompteBancaire c1 , CompteBancaire c2) {
@@ -93,7 +92,7 @@ public boolean comparer ( CompteBancaire c1 , CompteBancaire c2) {
 
 
 
-
+/* 
 
 
       // Vérifie que la voiture est stoppee
@@ -140,12 +139,11 @@ public boolean comparer ( CompteBancaire c1 , CompteBancaire c2) {
       public String getMarque() {
           return this.marque;
       }
-
-
-
-
-
-
-
 }
+
+*/
+
+
+
+
 
