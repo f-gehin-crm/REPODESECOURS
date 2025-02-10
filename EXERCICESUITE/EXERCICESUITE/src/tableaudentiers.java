@@ -5,7 +5,7 @@ public class tableaudentiers {
         /*  Écrire un algorithme qui déclare un tableau d’entiers et le remplit avec 8 valeurs numériques en les mettant toutes à zéro. */
 
 
-
+// BONJOUR
    
     public static void main(String[] args) throws Exception {
         System.out.println("\n" + " Hello, World !!!!"  + "\n");
